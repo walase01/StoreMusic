@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:views="clr-namespace:StoreMusicInXamarinForms.Views"
+             x:Class="StoreMusicInXamarinForms.Views.MenuMusicTabbedPage">
+  <!--Pages can be added as references or inline-->
+    <views:HomePage Title="{Binding iconOption1.Title}" IconImageSource="{Binding iconOption1.Image}"/>
+    <ContentPage Title="{Binding iconOption2.Title}"  IconImageSource="{Binding iconOption2.Image}"/>
+    <ContentPage Title="{Binding iconOption3.Title}" IconImageSource="{Binding iconOption3.Image}"/>
+    <ContentPage Title="{Binding iconOption4.Title}"  IconImageSource="{Binding iconOption4.Image}"/>
+    <ContentPage Title="{Binding iconOption5.Title}" IconImageSource="{Binding iconOption5.Image}"/>
+</TabbedPage>

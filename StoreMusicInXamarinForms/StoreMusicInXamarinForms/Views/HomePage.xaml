@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StoreMusicInXamarinForms.Views.HomePage"
+             xmlns:FirstControls="clr-namespace:StoreMusicInXamarinForms.Controls">
+    <ScrollView>
+        <StackLayout>
+
+            <SearchBar Placeholder="Quick Help" Grid.Row="0" Grid.Column="0"  CancelButtonColor="Black"
+           PlaceholderColor="Black" TextColor="Black" TextTransform="Lowercase" HorizontalTextAlignment="Center"
+           FontSize="Medium"  FontAttributes="Italic" />
+
+            <StackLayout Orientation="Horizontal">
+                <StackLayout>
+                    <FirstControls:FirstItemView BindingContext="{Binding IconText1}" WidthRequest="90" Margin="5" Grid.Column="0" Grid.Row="1"/>
+                </StackLayout>
+                <StackLayout>
+                    <FirstControls:FirstItemView BindingContext="{Binding IconText2}" WidthRequest="90" Margin="5" Grid.Column="0" Grid.Row="1"/>
+                </StackLayout>
+                <StackLayout>
+                    <FirstControls:FirstItemView BindingContext="{Binding IconText3}" WidthRequest="90" Margin="5" Grid.Column="0" Grid.Row="1"/>
+                </StackLayout>
+                <StackLayout>
+                    <FirstControls:FirstItemView BindingContext="{Binding IconText4}" WidthRequest="90" Margin="5" Grid.Column="0" Grid.Row="1"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="{Binding SubTitle}" TextColor="Black" FontSize="20" FontAttributes="Bold" Margin="15"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Frame BackgroundColor="White" HasShadow="True" 
+                       HorizontalOptions="CenterAndExpand" HeightRequest="200" 
+                       WidthRequest="350" CornerRadius="10" >
+
+                    <StackLayout>
+                        <Grid RowSpacing="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20*"></RowDefinition>
+                                <RowDefinition Height="65*"></RowDefinition>
+                                <RowDefinition Height="15*"></RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <Image Grid.RowSpan="3" Grid.Column="0"
+                                    Source="{Binding TreeImage}"
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand" 
+                                   WidthRequest="500" HeightRequest="500"
+                                     Aspect="Fill" />
+                            <Label Grid.Row="2" Grid.Column="0"
+                                    Text="{Binding TextImageTree}" 
+                                    HorizontalOptions="FillAndExpand"
+                                    VerticalOptions="FillAndExpand"
+                                     HorizontalTextAlignment="Start"
+                                     VerticalTextAlignment="Center"
+                                     TextColor="Black" 
+                                    FontSize="22"/>
+
+                        </Grid>
+                    </StackLayout>
+
+                </Frame>
+
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="{Binding SubTitle2}" TextColor="Black" FontSize="20" FontAttributes="Bold" Margin="15"/>
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+    
+</ContentPage>
